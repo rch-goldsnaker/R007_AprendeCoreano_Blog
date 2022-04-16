@@ -5,10 +5,7 @@ import moment from 'moment';
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
-    <React.Fragment>
-      <h1>{obj}</h1>
-      <RichText content={content.raw.children} />
-    </React.Fragment>
+    
     if (obj) {
       if (obj.bold) {
         modifiedText = (<b key={index}>{text}</b>);
@@ -40,6 +37,10 @@ const PostDetail = ({ post }) => {
             src={obj.src}
           />
         );
+      case 'bulleted-list':
+        return <ul key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</ul>;
+      case 'list-item':
+        return <li key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</li>;
       default:
         return modifiedText;
     }
