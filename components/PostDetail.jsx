@@ -37,9 +37,7 @@ const PostDetail = ({ post }) => {
           />
         );
       case 'bulleted-list':
-        return <ul key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}
-        <li key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</li>
-        </ul>;
+        return <ul key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}<li key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</li></ul>;
       default:
         return modifiedText;
     }
