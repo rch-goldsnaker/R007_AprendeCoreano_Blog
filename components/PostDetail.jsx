@@ -6,8 +6,8 @@ const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
     <React.Fragment>
-      <h1>{post.name}</h1>
-      <RichText content={post.content.raw.children} />
+      <h1>{obj}</h1>
+      <RichText content={content.raw.children} />
     </React.Fragment>
     if (obj) {
       if (obj.bold) {
