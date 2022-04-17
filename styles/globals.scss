@@ -62,3 +62,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  ul, ol {
+    list-style: revert;
+  }
+}
