@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const PostDetail = ({ post }) => {
   return (
-    <React.Fragment>
+    <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
@@ -32,7 +32,7 @@ const PostDetail = ({ post }) => {
           {parse(post.content.html)}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
