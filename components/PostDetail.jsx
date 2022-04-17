@@ -31,7 +31,7 @@ const PostDetail = ({ post }) => {
         {parse(post.content.html)}
       </div>
     </div>
-  </>
+  </>;
 };
 
 export default PostDetail;
