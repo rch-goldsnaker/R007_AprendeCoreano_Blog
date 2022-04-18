@@ -66,5 +66,7 @@ a {
 @layer base {
   ul, ol {
     list-style: revert;
+    margin-left: 1rem; 
+    margin-bottom: 1rem; 
   }
 }
